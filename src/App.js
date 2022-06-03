@@ -1,13 +1,13 @@
 import React from "react"
 import Navbar from "./components/Navbar"
-import Jounal from "./components/Jounal"
+import Journal from "./components/Journal"
 import data from "./data"
 console.log(data)
 
 export default function App() {
-    const jounalLists = data.map(item=>{
+    const journalLists = data.map(item=>{
                                     return(
-                                        <Jounal
+                                        <Journal
                                             {...item}
                                         />
                                     )
@@ -15,7 +15,9 @@ export default function App() {
     return (
         <div>
             <Navbar />
-            {jounalLists}
+            <section className="journal-lists">
+                {journalLists}
+            </section>
         </div>
     )
 }
